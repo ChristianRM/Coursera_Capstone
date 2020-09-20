@@ -1,7 +1,7 @@
 # Coursera_Capstone
 ---
 ### This Repo contains:
-**FinaReport.md:** *This is the formal representation for the work walkthrough and findings*
+**FinalReport.md:** *This is the formal representation for the work walkthrough and findings*
 
 **ProjectNotebook.ipynb:** *This is the notebook used for the python operations*
 
