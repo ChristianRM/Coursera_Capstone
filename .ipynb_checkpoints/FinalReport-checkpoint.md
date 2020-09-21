@@ -113,17 +113,21 @@ The data set was split into:
 The three models are built using the same test and train set.
 <b>KNN</b>
 First, the best k is selected via iterative testing
+
 <img src="https://github.com/ChristianRM/Coursera_Capstone/blob/master/img/best_k%20(2).jpg?raw=true" width="550">
 
 Then the model is built
+
 <img src="https://github.com/ChristianRM/Coursera_Capstone/blob/master/img/knn_model.JPG?raw=true" width="550">
 
 <b>Decision Tree</b>
 The decision tree model was built as shown next
+
 <img src="https://github.com/ChristianRM/Coursera_Capstone/blob/master/img/dt_model.JPG?raw=true" width="550">
 
 <b>SVM</b>
 The support vector machine was defined this way
+
 <img src="https://github.com/ChristianRM/Coursera_Capstone/blob/master/img/svm_model.JPG?raw=true" width="350">
 
 
