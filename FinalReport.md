@@ -1,6 +1,10 @@
 # <center> **IBM CAPSTONE PROJECT FINAL REPORT** </center>
 ## <center> **Car Accident Severity** </center>
 
+**<center>Christian Rincon</center>**
+<br>
+<br>
+
 ---
 **<i>Abstract</i>**
 <i>
@@ -61,15 +65,78 @@ The data set is summarized as shown in the following table (Extracted from the a
 <!-- In this phase, you need to collect or extract the dataset from various sources such as csv file or SQL database. Then, you need to determine the attributes (columns) that you will use to train your machine learning model. Also, you will assess the condition of chosen attributes by looking for trends, certain patterns, skewed information, correlations, and so on. -->
 
 ### Data Preparation:
+Here is presented the construction of the final dataset in order to be fed to the algorithms.
+The previously shown data set had a lot of extra columns and null vaues, also the column 'INCDATE' will be useful in the creation of new columns that may help having an understanding of the data.
+
+Using the column 'INCDATE' the values were parsed and split in order to show the reader the number of accidents by year, month, and day of week.
+
+The year with the highest number of registered incidents was 2005
+
+<img src="https://github.com/ChristianRM/Coursera_Capstone/blob/master/img/incidents_per_year.JPG?raw=true" width="550">
+
+The month with the highest number of registered incidents was October
+
+<img src="https://github.com/ChristianRM/Coursera_Capstone/blob/master/img/%C3%ACncidents_by_month.JPG?raw=true" width="550">
+
+The day of the week with the highest number of registered incidents was Friday
+
+<img src="https://github.com/ChristianRM/Coursera_Capstone/blob/master/img/incidents_by_dayofweek.JPG?raw=true" width="550">
+
+
+
+As of the severity code the values were also plotted and the results are as follows, being the code '1' the most registered (this code being property damage).
+
+<img src="https://github.com/ChristianRM/Coursera_Capstone/blob/master/img/severitycode_distribution.JPG?raw=true" width="550">
+
+
+Lastly in this data preparation, the null values were dropped then categorical was asigned value.
+
+<img src="https://github.com/ChristianRM/Coursera_Capstone/blob/master/img/other_data_distribution.JPG?raw=true" width="550">
+
+
 <!-- The data preparation includes all the required activities to construct the final dataset which will be fed into the modeling tools. Data preparation can be performed multiple times and it includes balancing the labeled data, transformation, filling missing data, and cleaning the dataset. -->
 
 ### Modeling:
+In this phase, three algorithms different models were trained, these for each of these algorithms:
+* KNN (K Nearest Neighbor)
+* Decision Tree
+* Support Vector Machine (SVM)
+
+The data set was split into: 
+80% training set
+20% testing set
+
+<img src="https://github.com/ChristianRM/Coursera_Capstone/blob/master/img/set_split.JPG?raw=true" width="550">
+
+
+### Building of the models:
+The three models are built using the same test and train set.
+<b>KNN</b>
+First, the best k is selected via iterative testing
+<img src="https://github.com/ChristianRM/Coursera_Capstone/blob/master/img/best_k%20(2).jpg?raw=true" width="550">
+
+Then the model is built
+<img src="https://github.com/ChristianRM/Coursera_Capstone/blob/master/img/knn_model.JPG?raw=true" width="550">
+
+<b>Decision Tree</b>
+The decision tree model was built as shown next
+<img src="https://github.com/ChristianRM/Coursera_Capstone/blob/master/img/dt_model.JPG?raw=true" width="550">
+
+<b>SVM</b>
+The support vector machine was defined this way
+<img src="https://github.com/ChristianRM/Coursera_Capstone/blob/master/img/svm_model.JPG?raw=true" width="350">
+
+
+
+### Comparison of the models:
+Once the models were evaluated, the results were as shown in the next image, being the SVM model the one with the best score.
+
+<img src="https://github.com/ChristianRM/Coursera_Capstone/blob/master/img/comparison.JPG?raw=true" width="300">
+
 <!-- In this phase, various algorithms and methods can be selected and applied to build the model including supervised machine learning techniques. You can select SVM, XGBoost, decision tree, or any other techniques. You can select a single or multiple machine learning models for the same data mining problem. At this phase, stepping back to the data preparation phase is often required. -->
+### Conclusion:
+Based on the obtained results in this project it is concluded that some conditions may infer in the result. Also due to the target value being non-binary the models were not able to predict with a greater presicion.
 
-### Evaluation:
-<!-- Before proceeding to the deployment stage, the model needs to be evaluated thoroughly to ensure that the business or the applications' objectives are achieved. Certain metrics can be used for the model evaluation such as accuracy, recall, F1-score, precision, and others. -->
-
-### Deployment:
 <!-- The deployment phase requirements vary from project to project. It can be as simple as creating a report, developing interactive visualization, or making the machine learning model available in the production environment. In this environment, the customers or end-users can utilize the model in different ways such as API, website, or so on. -->
 
 ### Acknoledgements
